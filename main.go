@@ -267,10 +267,10 @@ func ensureSocketDoesNotExist(proxySock string) error {
 }
 
 func main() {
-	fmt.Println(
+	fmt.Print(
 		"docker-platformify  Copyright (C) 2020  Davide Depau <davide@depau.eu>\n" +
 			"This program comes with ABSOLUTELY NO WARRANTY; This is free software,\n" +
-			"and you are welcome to redistribute it under certain conditions.",
+			"and you are welcome to redistribute it under certain conditions.\n\n",
 	)
 
 	if len(os.Args) < 4 {
