@@ -22,6 +22,12 @@ ensure `binfmt_misc` is configured correctly, for example:
 :qemu-aarch64:M::\x7fELF\x02\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x00\xb7:\xff\xff\xff\xff\xff\xff\xff\x00\xff\xff\xff\xff\xff\xff\xff\xff\xfe\xff\xff:/usr/bin/qemu-aarch64-static:CF
 ```
 
+Also, Docker needs to be started with the `--experimental` flag.
+
+Note that this is equivalent to adding `--platform yourvalue` to the `docker pull`/
+`docker run` commands, it just does it transparently. My use case is a CI runner
+that connects to Docker using the API without the command line.
+
 ### Building
 
 ```bash
