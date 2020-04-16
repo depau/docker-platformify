@@ -274,8 +274,8 @@ func main() {
 	)
 
 	if len(os.Args) < 4 {
-		fmt.Printf("Usage: %s <docker socket> <proxied socket> <platform string> [log level]\n", os.Args[0])
-		fmt.Println("Log level must be one of: CRITICAL, ERROR, WARNING, NOTICE, INFO, DEBUG; default INFO")
+		_, _ = fmt.Fprintf(os.Stderr, "Usage: %s <docker socket> <proxied socket> <platform string> [log level]\n", os.Args[0])
+		_, _ = fmt.Fprintln(os.Stderr, "Log level must be one of: CRITICAL, ERROR, WARNING, NOTICE, INFO, DEBUG; default INFO")
 		os.Exit(1)
 	}
 
