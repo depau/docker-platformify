@@ -14,7 +14,7 @@ Industrial grade duct-tape!
 
 ## Usage
 
-Since executables built for another architecture won't magically run on your
+Since executables built for another architecture won't magically run on their
 machine on your own, you're gonna have to install `qemu-user-static` and
 ensure `binfmt_misc` is configured correctly, for example:
 
